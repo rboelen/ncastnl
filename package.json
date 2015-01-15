@@ -1,0 +1,16 @@
+{
+  "name": "ncast",
+  "description": "ncast website.",
+  "version": "1.0.0",
+  "author": "CKDT (http://ckdt.nl/)",
+  "homepage": "http://n-cast.nl/",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-less": "~0.9.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-targethtml": "~0.2.4",
+    "grunt-contrib-handlebars": "~0.5.10"
+  }
+}
