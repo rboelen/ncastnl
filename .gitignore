@@ -1,0 +1,15 @@
+.installed.cfg
+bin/
+develop-eggs/
+parts/
+_build
+*.db
+*.log
+*.pyc
+*.egg-info
+*.DS_Store
+*.egg
+var
+.mr.developer.cfg
+extras
+node_modules/
