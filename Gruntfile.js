@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
-					'dist/js/scripts.min.js': ['app/scripts/plugins.js', 'app/scripts/templates.js', 'app/scripts/main.js']
+					'dist/js/scripts.min.js': ['app/scripts/plugins.js', 'app/scripts/main.js']
 				}
 			}
 		},
@@ -23,21 +23,7 @@ module.exports = function(grunt) {
 					yuicompress: true
 				},
 				files: {
-					'dist/css/style.min.css': ['app/less/style.less', 'app/less/responsive.less']
-				}
-			}
-		},
-		handlebars: {
-			compile: {
-				options: {
-					namespace: 'NVVE.Templates',
-					processName: function(filename) {
-						var nameArray = filename.split('/');
-						return nameArray[nameArray.length-1];
-					}
-				},
-				files: {
-					'app/scripts/templates.js': ['app/templates/persoonsgegevens', 'app/templates/contactgegevens', 'app/templates/betaalgegevens']
+					'dist/css/style.min.css': ['app/less/style.less']
 				}
 			}
 		},
@@ -54,12 +40,10 @@ module.exports = function(grunt) {
 		copy: {
 			dist: {
 				files: [
-					{expand: true, cwd: 'app/scripts/vendor', src: ['*'], dest: 'dist/scripts/vendor/'},
+					{expand: true, cwd: 'app/scripts/vendor', src: ['*'], dest: 'dist/js/vendor/'},
 					{expand: true, cwd: 'app/img/', src: ['*'], dest: 'dist/img/'},
 					{expand: true, cwd: 'app/video/', src: ['*'], dest: 'dist/video/'},
-					{expand: true, cwd: 'app/fonts/', src: ['*'], dest: 'dist/fonts/'},
-					{expand: true, cwd: 'app/', src: ['register.php'], dest: 'dist/', filter: 'isFile'},
-					{expand: true, cwd: 'app/', src: ['dummy.html'], dest: 'dist/', filter: 'isFile'}
+					{expand: true, cwd: 'app/fonts/', src: ['*'], dest: 'dist/fonts/'}
 				]
 			}
 		},
@@ -82,7 +66,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-contrib-less");
 	grunt.loadNpmTasks("grunt-contrib-copy");
 	grunt.loadNpmTasks('grunt-targethtml');
-	grunt.loadNpmTasks('grunt-contrib-handlebars');
 	grunt.registerTask('default', ['less', 'watch']);
-	grunt.registerTask('build', ['less', 'handlebars', 'uglify', 'copy', 'targethtml']);
+	grunt.registerTask('build', ['less', 'uglify', 'copy', 'targethtml']);
 };
