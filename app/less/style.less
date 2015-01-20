@@ -49,6 +49,51 @@
 @import "../bootstrap/less/utilities.less";
 @import "../bootstrap/less/responsive-utilities.less";
 
+//Fonts
+@body-font-path: "../fonts/";
+
+@font-face {
+    font-family: 'uni-sans';
+    src: url('@{body-font-path}uni-sans-regular-webfont.eot');
+    src: url('@{body-font-path}uni-sans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{body-font-path}uni-sans-regular-webfont.woff') format('woff'),
+         url('@{body-font-path}uni-sans-regular-webfont.ttf') format('truetype'),
+         url('@{body-font-path}uni-sans-regular-webfont.svg#uni_sans_book_italicitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'uni-sans';
+    src: url('@{body-font-path}uni-sans-semi-bold-webfont.eot');
+    src: url('@{body-font-path}uni-sans-semi-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{body-font-path}uni-sans-semi-bold-webfont.woff') format('woff'),
+         url('@{body-font-path}uni-sans-semi-bold-webfont.ttf') format('truetype'),
+         url('@{body-font-path}uni-sans-semi-bold-webfont.svg#uni_sans_book_italicitalic') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'uni-sans';
+    src: url('@{body-font-path}uni-sans-light-webfont.eot');
+    src: url('@{body-font-path}uni-sans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{body-font-path}uni-sans-light-webfont.woff') format('woff'),
+         url('@{body-font-path}uni-sans-light-webfont.ttf') format('truetype'),
+         url('@{body-font-path}uni-sans-light-webfont.svg#uni_sans_book_italicitalic') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+// Customization
+@font-family-sans-serif: 'uni-sans';
+@text-color: #fff;
+@brand-primary: #EA4325;
+@btn-default-color: #fff;
+@btn-default-bg: #253546;
+@btn-default-border: lighten(@btn-default-bg,10%);
+@brand-info: #253546;
+@navbar-default-link-color: @brand-info;
+@feature-color: #E7E7E7;
+
 body {
 	padding-top: @navbar-height;
 }
@@ -64,11 +109,15 @@ div[class^="col-"]{
 }
 
 #header{ }
+.navbar-brand {
+  background: url("../img/logo.svg") no-repeat center center;
+  width: 154px;
+  height: 90px;
+}
 .video{
 	width:100%;
 	height: auto;
 }
-
 #about{}
 .why{
 	clear: both;
@@ -76,22 +125,113 @@ div[class^="col-"]{
 	height: 400px;
 	background: blue;
 }
-
+#n-cast{
+	background: white;
+}
+.map{
+	width: 100%;
+	height: 400px;
+	background: grey;
+	padding: 200px 200px;
+}
 .split{
 	float:left;
 	width: 50%;
-	height: 400px;
+	height: 500px;
 }
 .split.split-left{
 	background: green;
 }
 .split.split-right{
-	background: purple;
+	background: white;
 }
-
-
-
-
-
-
-
+.arrow-box {
+	position: relative;
+	background: white;
+}
+.after-box{
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: white;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.arrow-box:after{
+	.after-box;
+	border-bottom-color: white;
+}
+#features h3, #subscribe h3, .customers h3{
+	padding-top: 40px;
+}
+#subscribe{
+}
+#features .arrow-box{
+	position: relative;
+	background: @feature-color;
+}
+#features .arrow-box:after{
+	.after-box;
+	border-bottom-color: @feature-color;
+	left: 16.666666666%;
+}
+.form-wrapper{
+	width: 80%;
+	margin: 25px auto 135px auto;
+}
+.card-wrapper{
+	width: 80%;
+	margin: 0 auto;
+	padding-bottom: 76px;
+}
+.card{
+	border: 1px solid #C1C1C1;
+	background: pink;
+}
+.card div{
+	padding: 14px 14px;
+}
+.form-inline .form-control{
+	width:100%;
+}
+#references{
+	background: orange;
+}
+.customers{
+	width: 80%;
+	margin: 0 auto;
+}
+.customers img{
+	display: block;
+	margin: 45px auto 50px auto;
+}
+.cases{
+	background: lightblue;
+}
+#contact{
+	background: @brand-info;
+}
+#contact .container{
+	padding-top: 33px;
+	padding-bottom: 130px;
+}
+footer{
+	background: #17222D;
+	padding-top: 22px; 
+	padding-bottom: 19px;
+	color: white;
+}
+.carousel-header{
+	position: absolute;
+	z-index:30;
+	margin: 0 auto;
+	text-align: center;
+	left: 15%;
+	right: 15%;
+}
