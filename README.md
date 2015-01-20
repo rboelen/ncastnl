@@ -1,6 +1,5 @@
-# NVVE Templates
+# n-cast template
 
-Templates for the NVVE website.
 
 Install dependencies:
 
