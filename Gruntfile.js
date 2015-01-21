@@ -49,11 +49,6 @@ module.exports = function(grunt) {
 		},
 		targethtml: {
 			dist: {
-				options: {
-					curlyTags: {
-						rlsdate: '<%= grunt.template.today("ddmmyyyyhMMss") %>'
-					}
-				},
 				files: {
 					'dist/index.html' : 'app/index.html'
 				}
