@@ -95,18 +95,22 @@
 @feature-color: #E7E7E7;
 
 body {
+	background: #fff;
 	padding-top: @navbar-height;
+	position: relative;
 }
 
 #site{
-	background: yellow;
+	background: @brand-info;
 	margin:0px auto;
 	max-width: 1170px;
 }
 
+/*
 div[class^="col-"]{
 	background: rgba(0,0,0,0.3);
 }
+*/
 
 #header{ }
 .navbar-brand {
@@ -118,32 +122,84 @@ div[class^="col-"]{
 	width:100%;
 	height: auto;
 }
-#about{}
+.lead{
+	font-size: 15px;
+	line-height: 1.8;
+}
+h2{
+	font-weight: 300;
+	font-size: 27px;
+}
+#about h2{
+	margin-top: 60px;
+	margin-bottom: 14px;
+}
+.worldwide .what h2, 
+.worldwide .what .lead,
+#n-cast h4,
+#n-cast .lead,
+.card h4,
+.card .lead {
+	color: @brand-info;
+}
+.worldwide .what h2{
+	margin-top: 60px;
+}
+#n-cast h3{
+	color: @brand-primary;
+	font-size: 42px;
+	font-weight: 300;
+	margin-top: 55px;
+}
+#n-cast img{
+	top: 46px;
+	position: relative;
+	margin-left: 15px;
+}
 .why{
+	overflow: hidden;
 	clear: both;
 	width: 100%;
-	height: 400px;
-	background: blue;
+}
+.video_image{
+	background: url("../img/img-from-video.jpg") no-repeat center center;
+	background-color: white;
+}
+.calling_image{
+	background: url("../img/bellend-meisje.jpg") no-repeat center center;
+	background-color: @brand-info;
 }
 #n-cast{
-	background: white;
+	background: #F2F2F2;
+}
+#features{
+	background-image: url("../img/features-bg.jpg");
+}
+#features h3,
+#news h3{
+	padding-top: 30px;
+	padding-bottom: 20px;
+	color: @brand-info;
 }
 .map{
-	width: 100%;
-	height: 400px;
-	background: grey;
-	padding: 200px 200px;
+	background: @brand-primary url("../img/map.jpg") no-repeat;
+}
+.map .row{
+	padding-top: 74px;
+	padding-bottom: 120px
+}
+.map h3{
+	font-size: 35px;
+	font-weight: 300;
 }
 .split{
-	float:left;
+	float: left;
 	width: 50%;
 	height: 500px;
 }
 .split.split-left{
-	background: green;
 }
 .split.split-right{
-	background: white;
 }
 .arrow-box {
 	position: relative;
@@ -167,23 +223,29 @@ div[class^="col-"]{
 	.after-box;
 	border-bottom-color: white;
 }
-#features h3, #subscribe h3, .customers h3{
-	padding-top: 40px;
-}
 #subscribe{
+	background: url("../img/subscribe-bg.jpg") no-repeat center center;
+	background-size: cover;
 }
-#features .arrow-box{
+#subscribe h3{
+	font-size: 35px;
+	font-weight: 300;
+	margin-top: 35px;
+}
+.arrow-up-inside{
+}
+.arrow-up-inside:after{
 	position: relative;
-	background: @feature-color;
-}
-#features .arrow-box:after{
-	.after-box;
-	border-bottom-color: @feature-color;
-	left: 16.666666666%;
+	left: 16.6666667%;
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid @feature-color;
 }
 .form-wrapper{
 	width: 80%;
-	margin: 25px auto 135px auto;
+	margin: 35px auto 100px auto;
 }
 .card-wrapper{
 	width: 80%;
@@ -192,7 +254,10 @@ div[class^="col-"]{
 }
 .card{
 	border: 1px solid #C1C1C1;
-	background: pink;
+	background: white;
+}
+.card img{
+	border-bottom: 1px solid #C1C1C1;
 }
 .card div{
 	padding: 14px 14px;
@@ -201,25 +266,22 @@ div[class^="col-"]{
 	width:100%;
 }
 #references{
-	background: orange;
+	background: white;
 }
-.customers{
-	width: 80%;
-	margin: 0 auto;
+.customers h3{
+	font-size: 20px;
+	color: @brand-info;
 }
 .customers img{
 	display: block;
 	margin: 45px auto 50px auto;
 }
-.cases{
-	background: lightblue;
-}
 #contact{
 	background: @brand-info;
 }
 #contact .container{
-	padding-top: 33px;
-	padding-bottom: 130px;
+	padding-top: 46px;
+	padding-bottom: 100px;
 }
 footer{
 	background: #17222D;
@@ -234,4 +296,19 @@ footer{
 	text-align: center;
 	left: 15%;
 	right: 15%;
+}
+#news{
+	background: url("../img/news-bg.jpg") center center;
+}
+#news,
+#about,
+#n-cast,
+#features,
+#references,
+#contact
+{
+	overflow: hidden;
+}
+.pushdown{
+	padding-top: 10px;
 }
