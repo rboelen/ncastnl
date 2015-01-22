@@ -1,10 +1,19 @@
  $(document).ready(function() {
- 	// navbar link fix, nodig ivm hoogte fixed navbar
- 	var offset = 90;
+ 	$(".navbar a[href^='#']").on('click', function(e) {
+	   // prevent default anchor click behavior
+	   e.preventDefault();
 
-	$('.navbar li a').click(function(event) {
-	    event.preventDefault();
-	    $($(this).attr('href'))[0].scrollIntoView();
-	    scrollBy(0, -offset);
+	   // store hash
+	   var hash = this.hash;
+
+	   // animate
+	   $('html, body').animate({
+	       scrollTop: $(this.hash).offset().top - 89
+	     }, 300, function(){
+
+	       // when done, add hash to url
+	       // (default click behaviour)
+	       window.location.hash = hash;
+	   });
 	});
 });

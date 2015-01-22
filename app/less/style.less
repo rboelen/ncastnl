@@ -95,12 +95,13 @@
 @feature-color: #E7E7E7;
 
 body {
+	background: #fff;
 	padding-top: @navbar-height;
 	position: relative;
 }
 
 #site{
-	background: yellow;
+	background: @brand-info;
 	margin:0px auto;
 	max-width: 1170px;
 }
@@ -156,8 +157,17 @@ h2{
 	margin-left: 15px;
 }
 .why{
+	overflow: hidden;
 	clear: both;
 	width: 100%;
+}
+.video_image{
+	background: url("../img/img-from-video.jpg") no-repeat center center;
+	background-color: white;
+}
+.calling_image{
+	background: url("../img/bellend-meisje.jpg") no-repeat center center;
+	background-color: @brand-info;
 }
 #n-cast{
 	background: #F2F2F2;
@@ -172,8 +182,7 @@ h2{
 	color: @brand-info;
 }
 .map{
-	background: @brand-primary;
-	background-image: url("../img/map.jpg");
+	background: @brand-primary url("../img/map.jpg") no-repeat;
 }
 .map .row{
 	padding-top: 74px;
@@ -189,10 +198,8 @@ h2{
 	height: 500px;
 }
 .split.split-left{
-	background: @brand-info;
 }
 .split.split-right{
-	background: white;
 }
 .arrow-box {
 	position: relative;
@@ -248,6 +255,9 @@ h2{
 .card{
 	border: 1px solid #C1C1C1;
 	background: white;
+}
+.card img{
+	border-bottom: 1px solid #C1C1C1;
 }
 .card div{
 	padding: 14px 14px;

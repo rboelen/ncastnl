@@ -6307,11 +6307,12 @@ button.close {
   font-style: normal;
 }
 body {
+  background: #fff;
   padding-top: 90px;
   position: relative;
 }
 #site {
-  background: yellow;
+  background: #253546;
   margin: 0px auto;
   max-width: 1170px;
 }
@@ -6364,8 +6365,17 @@ h2 {
   margin-left: 15px;
 }
 .why {
+  overflow: hidden;
   clear: both;
   width: 100%;
+}
+.video_image {
+  background: url("../img/img-from-video.jpg") no-repeat center center;
+  background-color: white;
+}
+.calling_image {
+  background: url("../img/bellend-meisje.jpg") no-repeat center center;
+  background-color: #253546;
 }
 #n-cast {
   background: #F2F2F2;
@@ -6380,8 +6390,7 @@ h2 {
   color: #253546;
 }
 .map {
-  background: #ea4325;
-  background-image: url("../img/map.jpg");
+  background: #ea4325 url("../img/map.jpg") no-repeat;
 }
 .map .row {
   padding-top: 74px;
@@ -6395,12 +6404,6 @@ h2 {
   float: left;
   width: 50%;
   height: 500px;
-}
-.split.split-left {
-  background: #253546;
-}
-.split.split-right {
-  background: white;
 }
 .arrow-box {
   position: relative;
@@ -6464,6 +6467,9 @@ h2 {
 .card {
   border: 1px solid #C1C1C1;
   background: white;
+}
+.card img {
+  border-bottom: 1px solid #C1C1C1;
 }
 .card div {
   padding: 14px 14px;
