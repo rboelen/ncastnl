@@ -43,14 +43,16 @@
 
 		<div id="site">
 			<section id="header">
-				<div class="video">
 
-					<video id="vid1" muted="muted" src="" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360" data-setup='{ "techOrder": ["vimeo"], "src": "https://vimeo.com/63186969", "loop": false, "autoplay": false }'>
-						<p>Video Playback Not Supported</p>
-					</video>
-
-					<img src="img/video.jpg" class="img-responsive">
+				<div class="videowrapper">				
+					<div class="video">
+						<video id="vid" class="video-js vjs-default-skin" controls preload="auto" poster="img/video.jpg" width="auto" height="auto" data-setup='{}'>
+							<source src="http://player.vimeo.com/external/109125368.sd.mp4?s=e4bf13ce9954a2f83be75c4fb6987728" type='video/mp4' />
+							<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+						</video>
+					</div>
 				</div>
+
 			</section>
 			<section id="about">
 				<div class="why">

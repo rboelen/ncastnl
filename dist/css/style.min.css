@@ -6368,8 +6368,8 @@ The control icons are from a custom font. Each icon corresponds to a character
 */
 @font-face {
   font-family: 'VideoJS';
-  src: url('font/vjs.eot');
-  src: url('font/vjs.eot?#iefix') format('embedded-opentype'), url('font/vjs.woff') format('woff'), url('font/vjs.ttf') format('truetype'), url('font/vjs.svg#icomoon') format('svg');
+  src: url('../video-js/font/vjs.eot');
+  src: url('../video-js/font/vjs.eot?#iefix') format('embedded-opentype'), url('../video-js/font/vjs.woff') format('woff'), url('../video-js/font/vjs.ttf') format('truetype'), url('../video-js/font/vjs.svg#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -7324,19 +7324,23 @@ body {
   margin: 0px auto;
   max-width: 1170px;
 }
-/*
-div[class^="col-"]{
-	background: rgba(0,0,0,0.3);
+#header {
+  width: 100%;
 }
-*/
+.videowrapper {
+  width: 100%;
+  max-width: 1170px;
+}
+.video-js {
+  padding-top: 56.25%;
+}
+.vjs-fullscreen {
+  padding-top: 0px;
+}
 .navbar-brand {
   background: url("../img/logo.svg") no-repeat center center;
   width: 154px;
   height: 90px;
-}
-.video {
-  width: 100%;
-  height: auto;
 }
 .lead {
   font-size: 15px;

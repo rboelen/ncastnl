@@ -1,4 +1,5 @@
  $(document).ready(function() {
+
  	$(".navbar a[href^='#']").on('click', function(e) {
 	   // prevent default anchor click behavior
 	   e.preventDefault();
@@ -16,4 +17,6 @@
 	       window.location.hash = hash;
 	   });
 	});
+
+	$(".videowrapper").fitVids();
 });
