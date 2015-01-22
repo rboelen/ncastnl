@@ -19,4 +19,20 @@
 	});
 
 	$(".videowrapper").fitVids();
+
+	var myPlayer = videojs('vid');
+		videojs("vid").ready(function(){
+			var myPlayer = this;
+			var isPlaying = !myPlayer.paused();
+			$("#play-button, #watch, .videocontrols").click(function(){
+				if(isPlaying==false){
+					myPlayer.play();
+					//$("#play-button, .videocontrols h1, #watch").hide()
+				} else{
+					myPlayer.pause();
+				};
+			});
+		});
+
+		//ended()
 });

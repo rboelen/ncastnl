@@ -118,44 +118,6 @@ body {
 }
 
 //video
-@main-font-color: @brand-primary;
-@big-play-width: 4em;
-@control-bg-color: #fff; // e.g. rgb(255, 255, 255) or #ffffff
-@control-bg-alpha: 1.0; // 1.0 = 100% opacity, 0.0 = 0% opacity
-// The button colors match the control colors by default but you can customize
-// them by replace the variables (@control-bg-color) with your own color values.
-@big-play-bg-color: @control-bg-color;
-@big-play-bg-alpha: @control-bg-alpha;
-@big-play-align: center;
-@big-play-vertical-align: middle;
-@big-play-font-size: 3em;
-// Now that font size is set, the following em values will be a multiple of the
-// new font size. If @big-play-font-size is 3em (30px), then setting the any of
-// the following values to 2em would equal 60px. 2 * font-size
-@big-play-margin: 0.5em;
-@big-play-width: 3em;
-@big-play-height: 3em;
-@big-play-border-radius: 10.0em;
-@big-play-border-width: 0.1em;
-@big-play-border-color: @brand-primary;
-
-.vjs-default-skin .vjs-big-play-button:before {
-  content: @play-icon;
-  font-family: VideoJS;
-  /* In order to center the play icon vertically we need to set the line height
-     to the same as the button height */
-  line-height: @big-play-height;
-  text-shadow: none;
-  text-align: center /* Needed for IE8 */;
-
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.vjs-default-skin .vjs-big-play-button{
-	z-index: 20;
-}
 .videowrapper{
 	width:100%;
 	max-width: 1170px;
@@ -170,13 +132,21 @@ body {
 	padding-top: 0px;
 }
 .videocontrols{
-	padding-top: 32%;
+	padding-top: 20%;
 	position: absolute;
 	z-index: 3;
 	text-align: center;
+	width: 100%;
+	height: 100%;
 }
 .videocontrols button{
 	margin-top: 21px;
+}
+#play-button{
+	background: url("../img/play.png") no-repeat center center;
+	width: 91px;
+	height: 91px;
+	border: none;
 }
 
 .navbar-brand {
