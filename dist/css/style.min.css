@@ -7358,6 +7358,12 @@ body {
   height: 91px;
   border: none;
 }
+#pause-button {
+  background: url("../img/pause.png") no-repeat center center;
+  width: 91px;
+  height: 91px;
+  border: none;
+}
 .navbar-brand {
   background: url("../img/logo.svg") no-repeat center center;
   width: 154px;

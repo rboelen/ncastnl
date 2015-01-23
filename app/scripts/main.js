@@ -20,19 +20,68 @@
 
 	$(".videowrapper").fitVids();
 
-	var myPlayer = videojs('vid');
-		videojs("vid").ready(function(){
-			var myPlayer = this;
-			var isPlaying = !myPlayer.paused();
-			$("#play-button, #watch, .videocontrols").click(function(){
-				if(isPlaying==false){
-					myPlayer.play();
-					//$("#play-button, .videocontrols h1, #watch").hide()
-				} else{
-					myPlayer.pause();
-				};
-			});
+	var ncastPlayer = videojs('vid');
+
+	videojs("vid").ready(function(){
+
+		var ncastPlayer = this;
+
+		//define click behaviours
+		$("#play-button, #watch").click(function(){
+			ncastPlayer.play();
+			$("#play-button, .videocontrols h1, #watch").addClass("hidden");
 		});
 
-		//ended()
+		$("#pause-button").click(function(){
+			ncastPlayer.pause();
+			$("#pause-button").addClass("hidden");
+		});
+
+		//define what to show when mouse is over video
+		$(".videocontrols").hover(
+			//mouse is in div
+			function() {
+				//begin
+				if(ncastPlayer.currentTime()==0){
+					console.log("begin-in", ncastPlayer.currentTime());
+					$("#play-button").removeClass("hidden");
+					$("#pause-button").addClass("hidden");
+				
+				//playing	
+				} else if (!ncastPlayer.paused()) {
+					console.log("playing-in", ncastPlayer.currentTime());
+					$("#play-button").addClass("hidden");
+					$("#pause-button").removeClass("hidden");
+				
+				//paused after some time playing
+				} else if ( (ncastPlayer.paused()) && (ncastPlayer.currentTime()>0) ){
+					console.log("paused-in");
+					$("#play-button").removeClass("hidden");
+					$("#pause-button").addClass("hidden");
+				};
+			},
+			//mouse is out of div
+			function() {
+				
+				//begin
+				if(ncastPlayer.currentTime()==0){
+					console.log("begin-out", ncastPlayer.currentTime());
+
+				//paused after some time playing
+				} else if ( (ncastPlayer.paused()) && (ncastPlayer.currentTime()>0) ){
+					console.log("paused-out", ncastPlayer.currentTime());
+					$("#pause-button").addClass("hidden");
+					$("#play-button").removeClass("hidden");
+				
+				//playing
+				} else if (!ncastPlayer.paused()) {
+					console.log("playing-out", ncastPlayer.currentTime());
+					$("#pause-button").addClass("hidden");
+					$("#play-button").addClass("hidden");
+				} else{
+				}
+			}
+		);
+	});
+	//ended()
 });
