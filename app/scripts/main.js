@@ -20,68 +20,85 @@
 
 	$(".videowrapper").fitVids();
 
-	var ncastPlayer = videojs('vid');
+	var ncastPlayer = videojs("vid");
+
+
 
 	videojs("vid").ready(function(){
 
-		var ncastPlayer = this;
 
-		//define click behaviours
-		$("#play-button, #watch").click(function(){
-			ncastPlayer.play();
-			$("#play-button, .videocontrols h1, #watch").addClass("hidden");
+		//click behaviour playbutton
+		$("#playPause, #watch, .videocontrols").click(function(){
+			if($("#vid").hasClass("vjs-paused")) {
+				ncastPlayer.play();
+				$("#playPause").addClass("playing");
+				$(".videocontrols h1, #watch").addClass("hidden");
+			}
+			else {
+				ncastPlayer.pause();
+				$("#playPause").removeClass("playing");
+			}
 		});
 
-		$("#pause-button").click(function(){
-			ncastPlayer.pause();
-			$("#pause-button").addClass("hidden");
-		});
-
-		//define what to show when mouse is over video
-		$(".videocontrols").hover(
-			//mouse is in div
+		$(".videowrapper").hover(
 			function() {
-				//begin
-				if(ncastPlayer.currentTime()==0){
-					console.log("begin-in", ncastPlayer.currentTime());
-					$("#play-button").removeClass("hidden");
-					$("#pause-button").addClass("hidden");
-				
-				//playing	
-				} else if (!ncastPlayer.paused()) {
-					console.log("playing-in", ncastPlayer.currentTime());
-					$("#play-button").addClass("hidden");
-					$("#pause-button").removeClass("hidden");
-				
-				//paused after some time playing
-				} else if ( (ncastPlayer.paused()) && (ncastPlayer.currentTime()>0) ){
-					console.log("paused-in");
-					$("#play-button").removeClass("hidden");
-					$("#pause-button").addClass("hidden");
-				};
+				$(".videocontrols").removeClass("hidden");
 			},
-			//mouse is out of div
 			function() {
-				
-				//begin
-				if(ncastPlayer.currentTime()==0){
-					console.log("begin-out", ncastPlayer.currentTime());
-
-				//paused after some time playing
-				} else if ( (ncastPlayer.paused()) && (ncastPlayer.currentTime()>0) ){
-					console.log("paused-out", ncastPlayer.currentTime());
-					$("#pause-button").addClass("hidden");
-					$("#play-button").removeClass("hidden");
-				
-				//playing
-				} else if (!ncastPlayer.paused()) {
-					console.log("playing-out", ncastPlayer.currentTime());
-					$("#pause-button").addClass("hidden");
-					$("#play-button").addClass("hidden");
+				if ($("#vid").hasClass("vjs-has-started")) {
+					$(".videocontrols").addClass("hidden");
 				} else{
-				}
+
+				};
 			}
 		);
+
+
+		// //define what to show when mouse is over video
+		// $(".videocontrols").hover(
+		// 	//mouse is in div
+		// 	function() {
+		// 		//begin
+		// 		if(ncastPlayer.currentTime()==0){
+		// 			console.log("begin-in", ncastPlayer.currentTime());
+		// 			$("#playPause").removeClass("hidden");
+		// 			$("#pause-button").addClass("hidden");
+				
+		// 		//playing	
+		// 		} else if (!ncastPlayer.paused()) {
+		// 			console.log("playing-in", ncastPlayer.currentTime());
+		// 			$("#playPause").addClass("hidden");
+		// 			$("#pause-button").removeClass("hidden");
+				
+		// 		//paused after some time playing
+		// 		} else if ( (ncastPlayer.paused()) && (ncastPlayer.currentTime()>0) ){
+		// 			console.log("paused-in");
+		// 			$("#playPause").removeClass("hidden");
+		// 			$("#pause-button").addClass("hidden");
+		// 		};
+		// 	},
+		// 	//mouse is out of div
+		// 	function() {
+				
+		// 		//begin
+		// 		if(ncastPlayer.currentTime()==0){
+		// 			console.log("begin-out", ncastPlayer.currentTime());
+
+		// 		//paused after some time playing
+		// 		} else if ( (ncastPlayer.paused()) && (ncastPlayer.currentTime()>0) ){
+		// 			console.log("paused-out", ncastPlayer.currentTime());
+		// 			$("#pause-button").addClass("hidden");
+		// 			$("#playPause").removeClass("hidden");
+				
+		// 		//playing
+		// 		} else if (!ncastPlayer.paused()) {
+		// 			console.log("playing-out", ncastPlayer.currentTime());
+		// 			$("#pause-button").addClass("hidden");
+		// 			$("#playPause").addClass("hidden");
+		// 		} else{
+		// 		}
+		// 	}
+		// );
 	});
 	//ended()
 });
