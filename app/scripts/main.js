@@ -22,17 +22,25 @@
 
 	var ncastPlayer = videojs("vid");
 
+	ncastPlayer.ready(function(){
 
-
-	videojs("vid").ready(function(){
-
+		this.on("ended", function(){
+			this.currentTime(0);
+			this.posterImage.show();
+			$("#playPause, .videocontrols h1, #watch").removeClass("hidden");
+			$("#playPause").removeClass("playing");
+		});
 
 		//click behaviour playbutton
-		$("#playPause, #watch, .videocontrols").click(function(){
-			if($("#vid").hasClass("vjs-paused")) {
+		$(".videocontrols").click(function(){
+
+			console.log(ncastPlayer.ended());
+
+			if(ncastPlayer.paused()) {
 				ncastPlayer.play();
 				$("#playPause").addClass("playing");
 				$(".videocontrols h1, #watch").addClass("hidden");
+				ncastPlayer.posterImage.hide();
 			}
 			else {
 				ncastPlayer.pause();
@@ -42,63 +50,15 @@
 
 		$(".videowrapper").hover(
 			function() {
-				$(".videocontrols").removeClass("hidden");
+				$("#playPause").removeClass("hidden");
 			},
 			function() {
-				if ($("#vid").hasClass("vjs-has-started")) {
-					$(".videocontrols").addClass("hidden");
-				} else{
+				if (ncastPlayer.currentTime() > 0) {
+					$("#playPause").addClass("hidden");
+				} else {
 
 				};
 			}
 		);
-
-
-		// //define what to show when mouse is over video
-		// $(".videocontrols").hover(
-		// 	//mouse is in div
-		// 	function() {
-		// 		//begin
-		// 		if(ncastPlayer.currentTime()==0){
-		// 			console.log("begin-in", ncastPlayer.currentTime());
-		// 			$("#playPause").removeClass("hidden");
-		// 			$("#pause-button").addClass("hidden");
-				
-		// 		//playing	
-		// 		} else if (!ncastPlayer.paused()) {
-		// 			console.log("playing-in", ncastPlayer.currentTime());
-		// 			$("#playPause").addClass("hidden");
-		// 			$("#pause-button").removeClass("hidden");
-				
-		// 		//paused after some time playing
-		// 		} else if ( (ncastPlayer.paused()) && (ncastPlayer.currentTime()>0) ){
-		// 			console.log("paused-in");
-		// 			$("#playPause").removeClass("hidden");
-		// 			$("#pause-button").addClass("hidden");
-		// 		};
-		// 	},
-		// 	//mouse is out of div
-		// 	function() {
-				
-		// 		//begin
-		// 		if(ncastPlayer.currentTime()==0){
-		// 			console.log("begin-out", ncastPlayer.currentTime());
-
-		// 		//paused after some time playing
-		// 		} else if ( (ncastPlayer.paused()) && (ncastPlayer.currentTime()>0) ){
-		// 			console.log("paused-out", ncastPlayer.currentTime());
-		// 			$("#pause-button").addClass("hidden");
-		// 			$("#playPause").removeClass("hidden");
-				
-		// 		//playing
-		// 		} else if (!ncastPlayer.paused()) {
-		// 			console.log("playing-out", ncastPlayer.currentTime());
-		// 			$("#pause-button").addClass("hidden");
-		// 			$("#playPause").addClass("hidden");
-		// 		} else{
-		// 		}
-		// 	}
-		// );
 	});
-	//ended()
 });
