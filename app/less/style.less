@@ -88,17 +88,23 @@
 
 // Bootstrap customization
 @font-family-sans-serif: 'uni-sans';
+@headings-line-height:    1.3;
 @text-color: #fff;
+
 @brand-primary: #EA4325;
+@brand-info: #253546;
+@feature-color: #E7E7E7;
+
 @btn-default-color: #fff;
 @btn-default-bg: #253546;
 @btn-default-border: lighten(@btn-default-bg,10%);
-@brand-info: #253546;
-@navbar-default-link-color: @brand-info;
-@feature-color: #E7E7E7;
 @btn-info-bg: transparent;
 @btn-info-border: #fff;
+
+@navbar-default-link-color: @brand-info;
+@navbar-default-link-hover-bg: #eee;
 @navbar-default-bg: #fff;
+@navbar-height: 90px;
 
 //site
 body {
@@ -123,9 +129,11 @@ body {
 	width:100%;
 	max-width: 1170px;
 }
-.videowrapper h1{
+.videowrapper h1 {
 	font-weight: 300;
 }
+
+
 .video-js {
 	padding-top: 56.25%;
 }
@@ -152,11 +160,10 @@ body {
 #playPause.playing{
 	background-position: -91px 0px;
 }
-
 .navbar-brand {
   background: url("../img/logo.svg") no-repeat center center;
   width: 154px;
-  height: 90px;
+  height: @navbar-height;
 }
 .lead{
 	font-size: 15px;
@@ -167,21 +174,28 @@ h2{
 	font-size: 27px;
 }
 #about h2{
-	margin-top: 60px;
+	margin-top: 54px;
 	margin-bottom: 14px;
+}
+#management{
+	background-color: #fff;
 }
 .worldwide .what h2, 
 .worldwide .what .lead,
 #n-cast h4,
 #n-cast .lead,
 .card h4,
-.card .lead {
+.card .lead,
+#management h4,
+#management .lead,
+#management ul{
 	color: @brand-info;
 }
 .worldwide .what h2{
 	margin-top: 60px;
 }
-#n-cast h3{
+#n-cast h3,
+#management h3{
 	color: @brand-primary;
 	font-size: 42px;
 	font-weight: 300;
@@ -200,10 +214,12 @@ h2{
 .video_image{
 	background: url("../img/img-from-video.jpg") no-repeat center center;
 	background-color: white;
+	height: 500px;
 }
 .calling_image{
 	background: url("../img/bellend-meisje.jpg") no-repeat center center;
 	background-color: @brand-info;
+	height: 500px;
 }
 #n-cast{
 	background: #F2F2F2;
@@ -224,19 +240,14 @@ h2{
 	padding-top: 74px;
 	padding-bottom: 120px
 }
-.map h3{
-	font-size: 35px;
+.map h1{
 	font-weight: 300;
 }
-.split{
-	float: left;
-	width: 50%;
-	height: 500px;
-}
-.split.split-left{
-}
-.split.split-right{
-}
+// .split{
+// 	float: left;
+// 	width: 50%;
+// 	height: 500px;
+// }
 .arrow-box {
 	position: relative;
 	background: white;
@@ -348,3 +359,58 @@ footer{
 .pushdown{
 	padding-top: 10px;
 }
+
+@media only screen and (max-width: @screen-xs) {
+	
+	.videocontrols{
+		padding-top: 0;
+	}
+
+	h1 {
+		font-size: 21px;
+	}
+	h2{
+		font-size: 24px;
+	}
+	body{
+		padding-top: 80px;
+	}
+	.navbar{
+		min-height: 80px;
+	}
+	.navbar-brand{
+		height: 80px;
+	}
+	.navbar-toggle {
+		margin-top: 23px;
+		margin-bottom: 23px;
+	}
+	.split{
+		float: none;
+		width: 100%;
+		height: 555px;
+	}
+	.map .row {
+		padding-top: 50px;
+		padding-bottom: 62px;
+	}
+	#about h2 {
+		margin-top: 30px;
+	}
+	.video_image {
+		height: 250px;
+	}
+	.calling_image{
+		height: 250px;
+	}
+	.card{
+		margin-bottom: 40px;
+	}
+	.card-wrapper{
+		padding-bottom: 20px;
+	}
+	.form-inline .form-control{
+		margin-bottom: 20px;
+	}
+}
+
