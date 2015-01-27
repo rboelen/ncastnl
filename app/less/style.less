@@ -86,7 +86,7 @@
     font-style: normal;
 }
 
-// Customization
+// Bootstrap customization
 @font-family-sans-serif: 'uni-sans';
 @text-color: #fff;
 @brand-primary: #EA4325;
@@ -96,7 +96,11 @@
 @brand-info: #253546;
 @navbar-default-link-color: @brand-info;
 @feature-color: #E7E7E7;
+@btn-info-bg: transparent;
+@btn-info-border: #fff;
+@navbar-default-bg: #fff;
 
+//site
 body {
 	background: #fff;
 	padding-top: @navbar-height;
@@ -109,21 +113,50 @@ body {
 	max-width: 1170px;
 }
 
-/*
-div[class^="col-"]{
-	background: rgba(0,0,0,0.3);
+#header{ 
+	width: 100%;
+	position:relative;
 }
-*/
 
-#header{ }
+//video
+.videowrapper{
+	width:100%;
+	max-width: 1170px;
+}
+.videowrapper h1{
+	font-weight: 300;
+}
+.video-js {
+	padding-top: 56.25%;
+}
+.vjs-fullscreen {
+	padding-top: 0px;
+}
+.videocontrols{
+	padding-top: 20%;
+	position: absolute;
+	z-index: 3;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+.videocontrols button{
+	margin-top: 21px;
+}
+#playPause{
+	background: url("../img/playPause.png") no-repeat 0px 0px;
+	width: 91px;
+	height: 91px;
+	border: none;
+}
+#playPause.playing{
+	background-position: -91px 0px;
+}
+
 .navbar-brand {
   background: url("../img/logo.svg") no-repeat center center;
   width: 154px;
   height: 90px;
-}
-.video{
-	width:100%;
-	height: auto;
 }
 .lead{
 	font-size: 15px;
