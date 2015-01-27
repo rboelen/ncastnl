@@ -58,9 +58,21 @@
 
 
 					<div class="video">
-						<video id="vid" class="video-js vjs-default-skin" preload="auto" poster="img/video.jpg" width="auto" height="auto" data-setup='{}'>
+						<video id="vid" class="video-js vjs-default-skin" preload="auto" poster="img/video.jpg" width="auto" height="auto" data-setup='{"techOrder": ["html5", "flash"]}'>
 							<source src="http://player.vimeo.com/external/109125368.sd.mp4?s=e4bf13ce9954a2f83be75c4fb6987728" type='video/mp4' />
-							<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+
+							<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+							</p>
+
+							<!-- Flash Fallback. Use any flash video player here. Make sure to keep the vjs-flash-fallback class. -->
+							<object id="flash_fallback_1" class="vjs-flash-fallback" width="auto" height="auto" type="application/x-shockwave-flash" data="video-js/video-js.swf">
+								<param name="movie" value="video-js/video-js.swf"/>
+								<param name="allowfullscreen" value="false"/>
+								<param name="flashvars" value='config={"playlist":["img/video.jpg", {"url": "http://player.vimeo.com/external/109125368.sd.mp4?s=e4bf13ce9954a2f83be75c4fb6987728","autoPlay":false,"autoBuffering":true}]}'/>
+								<!-- Image Fallback. Typically the same as the poster image. -->
+								<img src="img/video.jpg" width="auto" height="auto" alt="Poster Image" title="No video playback capabilities." />
+							</object>
+							
 						</video>
 					</div>
 				</div>
@@ -211,6 +223,7 @@
 					<div class="row">
 						<div class="customers col-md-12">
 							<h3 class="text-center">Happy customers</h3>
+							
 							<img class="img-responsive" src="../app/img/customers.jpg">
 						</div>
 					</div>
