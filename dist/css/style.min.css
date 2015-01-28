@@ -7355,6 +7355,13 @@ body {
 .videocontrols button {
   margin-top: 21px;
 }
+.videocontrols .labelos {
+  position: absolute;
+  width: 285px;
+  height: 93px;
+  bottom: 5px;
+  right: 0;
+}
 #playPause {
   background: url("../img/playPause.png") no-repeat 0px 0px;
   width: 91px;
