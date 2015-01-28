@@ -10,9 +10,13 @@
 		<meta name="viewport" content="width=device-width">
 		<!--(if target dev)><!-->
 		<link rel="stylesheet" href="css/style.css">
-		<!--<!(endif)-->
-		<!--(if target dist)><link rel="stylesheet" href="css/style.min.css"><!(endif)-->
 		<script src="scripts/vendor/modernizr-2.8.3.min.js"></script>
+		<!--<!(endif)-->
+
+		<!--(if target dist)><!-->
+		<link rel="stylesheet" href="css/style.min.css">
+		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		<!--<!(endif)-->
 	</head>
 	<body data-spy="scroll" data-offset="90" data-target="#navbar" class="home">
 
@@ -375,9 +379,10 @@
 		<script src="scripts/plugins.js"></script>
 		<script src="scripts/main.js"></script>
 		<!--<!(endif)-->
-		<!--
+		
+		<!--(if target dist)><!-->
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 		<script src="js/scripts.min.js"></script>
-		-->
+		<!--<!(endif)-->
 	</body>
 </html>
