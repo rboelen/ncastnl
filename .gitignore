@@ -13,3 +13,4 @@ var
 .mr.developer.cfg
 extras
 node_modules/
+dist/
