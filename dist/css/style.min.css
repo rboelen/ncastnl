@@ -7381,7 +7381,9 @@ h2 {
   margin-top: 54px;
   margin-bottom: 14px;
 }
-#management {
+#management,
+#publishing,
+#network-management {
   background-color: #fff;
 }
 .worldwide .what h2,
@@ -7392,26 +7394,68 @@ h2 {
 .card .lead,
 #management h4,
 #management .lead,
-#management ul {
+#management ul,
+#scheduling h4,
+#scheduling .lead,
+#scheduling ul,
+#publishing h4,
+#publishing .lead,
+#publishing ul,
+#workspaces h4,
+#workspaces .lead,
+#workspaces ul,
+#network-management h4,
+#network-management .lead,
+#network-management ul,
+#reporting h4,
+#reporting .lead,
+#reporting ul,
+#techsheet ul {
   color: #253546;
 }
 .worldwide .what h2 {
   margin-top: 60px;
 }
-#n-cast h3,
-#management h3 {
+#n-cast h3 {
   color: #ea4325;
   font-size: 42px;
   font-weight: 300;
   margin-top: 55px;
+}
+.content-right h3,
+.content-left h3 {
+  color: #ea4325;
+  font-size: 42px;
+  font-weight: 300;
+  margin-top: 60px;
+}
+.content-left ul,
+.content-right ul {
+  line-height: 1.8;
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 40px;
+  margin-bottom: 121px;
+}
+#techsheet ul {
+  line-height: 1.8;
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 40px;
 }
 #n-cast img {
   top: 46px;
   position: relative;
   margin-left: 15px;
 }
-#management img {
-  top: 46px;
+.content-right img {
+  top: 57px;
+  left: -15px;
+  position: relative;
+}
+.content-left img {
+  top: 53px;
+  left: 15px;
   position: relative;
 }
 .why {
@@ -7429,14 +7473,19 @@ h2 {
   background-color: #253546;
   height: 500px;
 }
-#n-cast {
+#n-cast,
+#scheduling,
+#workspaces,
+#reporting {
   background: #F2F2F2;
 }
-#features {
+#features,
+#techsheet {
   background-image: url("../img/features-bg.jpg");
 }
 #features h3,
-#news h3 {
+#news h3,
+#techsheet h3 {
   padding-top: 30px;
   padding-bottom: 20px;
   color: #253546;
@@ -7499,7 +7548,7 @@ h2 {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 10px solid #e7e7e7;
+  border-bottom: 10px solid #DCE0E1;
 }
 .form-wrapper {
   width: 80%;
@@ -7563,7 +7612,13 @@ footer {
 #n-cast,
 #features,
 #references,
-#contact {
+#contact,
+#management,
+#scheduling,
+#network-management,
+#publishing,
+#workspaces,
+#reporting {
   overflow: hidden;
 }
 .pushdown {
