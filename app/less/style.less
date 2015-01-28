@@ -421,7 +421,20 @@ footer{
 .pushdown{
 	padding-top: 10px;
 }
-
+.progressbar{
+   background: darken(@brand-info,10%);
+   height: 5px;
+   overflow:hidden;
+}
+.timebar
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 5px;
+   background: @brand-primary;
+}
 @media only screen and (max-width: @screen-xs) {
 	
 	.videocontrols{
@@ -474,20 +487,25 @@ footer{
 	.form-inline .form-control{
 		margin-bottom: 20px;
 	}
-}
+	.arrow-up-inside:after{
+		left:50%;
+	}
 
-.progressbar{
-   background: darken(@brand-info,10%);
-   height: 5px;
-   overflow:hidden;
+	.arrow-up-inside:after{
+		left:46%;
+	}
 }
-.timebar
-{
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 0;
-   height: 5px;
-   background: @brand-primary;
+@media only screen and (max-width: 1024px) {
+	.container{
+		width:100%;
+		margin-right:0;
+		margin-left:0;
+	}
+	#n-cast .btn{
+		margin-bottom: 40px;
+	}
+	#n-cast img{
+		top:78px;
+	}
 }
 
