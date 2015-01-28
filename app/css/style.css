@@ -7319,6 +7319,9 @@ body {
   padding-top: 90px;
   position: relative;
 }
+:focus {
+  outline: none;
+}
 #site {
   background: #253546;
   margin: 0px auto;
@@ -7406,6 +7409,10 @@ h2 {
   top: 46px;
   position: relative;
   margin-left: 15px;
+}
+#management img {
+  top: 46px;
+  position: relative;
 }
 .why {
   overflow: hidden;
