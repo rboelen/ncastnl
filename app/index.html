@@ -25,7 +25,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="#"></a>
+		      <a class="navbar-brand" href="/"></a>
 		    </div>
 		    <div id="navbar" class="collapse navbar-collapse navbar-right">
 		      <ul class="nav navbar-nav">
@@ -72,8 +72,14 @@
 								<!-- Image Fallback. Typically the same as the poster image. -->
 								<img src="img/video.jpg" width="auto" height="auto" alt="Poster Image" title="No video playback capabilities." />
 							</object>
-
 						</video>
+					</div>
+					<div class="progressbar container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="timebar"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -206,15 +212,18 @@
 						<div class="form-wrapper">
 							<div class="container-fluid">
 								<div class="row">
-									<form class="form-inline">
+									<form class="form-inline" action="http://n-store.createsend.com/t/j/s/pjuzh/" method="post">
 										<div class="col-md-3">
-											<input type="text" class="form-control input-lg" id="InputName" placeholder="Full Name">
+											<label for="fieldName" class="hidden">Name</label>
+											<input type="text" class="form-control input-lg" id="fieldName" name="cm-name" placeholder="Full Name">
 										</div>
 										<div class="col-md-3">
-											<input type="email" class="form-control input-lg" id="InputEmail" placeholder="E-mail adress">
+											<label for="fieldEmail" class="hidden">Email</label>
+											<input type="email" class="form-control input-lg" id="fieldEmail" name="cm-pjuzh-pjuzh" placeholder="E-mail adress">
 										</div>
 										<div class="col-md-3">
-											<input type="text" class="form-control input-lg" id="InputSection" placeholder="Section">
+											<label for="fieldurjrz" class="hidden">Company</label>
+											<input type="text" class="form-control input-lg" id="fieldurjrz" name="cm-f-urjrz" placeholder="Company">
 										</div>
 										<div class="col-md-3">
 											<button type="submit" class="btn btn-default btn-lg">Subscribe</button>
