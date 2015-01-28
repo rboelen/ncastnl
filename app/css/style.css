@@ -7701,16 +7701,19 @@ footer {
     left: 46%;
   }
 }
-@media only screen and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .container {
     width: 100%;
     margin-right: 0;
     margin-left: 0;
   }
   #n-cast .btn {
-    margin-bottom: 40px;
+    margin-bottom: 11px;
   }
   #n-cast img {
-    top: 78px;
+    top: 70px;
+  }
+  .what .lead:nth-child(3) {
+    margin-bottom: 129px;
   }
 }
