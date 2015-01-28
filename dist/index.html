@@ -9,8 +9,11 @@
 		<title>n-cast</title>
 		<meta name="viewport" content="width=device-width">
 		
+
+		
 		<link rel="stylesheet" href="css/style.min.css">
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		
 	</head>
 	<body data-spy="scroll" data-offset="90" data-target="#navbar" class="home">
 
@@ -23,7 +26,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="#"></a>
+		      <a class="navbar-brand" href="/"></a>
 		    </div>
 		    <div id="navbar" class="collapse navbar-collapse navbar-right">
 		      <ul class="nav navbar-nav">
@@ -47,9 +50,10 @@
 					<div class="container">
 						<div class="row">
 							<div class="videocontrols col-md-12">
-								<button type="button" id="playPause"> </button>
+								<button type="button" id="playPause" class="hidden-xs"> </button>
 								<h1>Meet the future of digital signage</h1>
 								<button id="watch" type="button" class="btn btn-info btn-lg hidden-xs">watch video</button>
+								<div class="labelos"><img src="img/weboslabel.png"></div>
 							</div>
 						</div>
 					</div>
@@ -58,19 +62,26 @@
 					<div class="video">
 						<video id="vid" class="video-js vjs-default-skin" preload="auto" poster="img/video.jpg" width="auto" height="auto" data-setup='{"techOrder": ["html5", "flash"]}'>
 							<source src="http://player.vimeo.com/external/109125368.sd.mp4?s=e4bf13ce9954a2f83be75c4fb6987728" type='video/mp4' />
-<!--
+
 							<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
 							</p>
 
+							<!-- Flash Fallback. Use any flash video player here. Make sure to keep the vjs-flash-fallback class. -->
 							<object id="flash_fallback_1" class="vjs-flash-fallback" width="auto" height="auto" type="application/x-shockwave-flash" data="video-js/video-js.swf">
 								<param name="movie" value="video-js/video-js.swf"/>
 								<param name="allowfullscreen" value="false"/>
 								<param name="flashvars" value='config={"playlist":["img/video.jpg", {"url": "http://player.vimeo.com/external/109125368.sd.mp4?s=e4bf13ce9954a2f83be75c4fb6987728","autoPlay":false,"autoBuffering":true}]}'/>
-							
+								<!-- Image Fallback. Typically the same as the poster image. -->
 								<img src="img/video.jpg" width="auto" height="auto" alt="Poster Image" title="No video playback capabilities." />
 							</object>
--->
 						</video>
+					</div>
+					<div class="progressbar container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="timebar"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -203,15 +214,18 @@
 						<div class="form-wrapper">
 							<div class="container-fluid">
 								<div class="row">
-									<form class="form-inline">
+									<form class="form-inline" action="http://n-store.createsend.com/t/j/s/pjuzh/" method="post">
 										<div class="col-md-3">
-											<input type="text" class="form-control input-lg" id="InputName" placeholder="Full Name">
+											<label for="fieldName" class="hidden">Name</label>
+											<input type="text" class="form-control input-lg" id="fieldName" name="cm-name" placeholder="Full Name">
 										</div>
 										<div class="col-md-3">
-											<input type="email" class="form-control input-lg" id="InputEmail" placeholder="E-mail adress">
+											<label for="fieldEmail" class="hidden">Email</label>
+											<input type="email" class="form-control input-lg" id="fieldEmail" name="cm-pjuzh-pjuzh" placeholder="E-mail adress">
 										</div>
 										<div class="col-md-3">
-											<input type="text" class="form-control input-lg" id="InputSection" placeholder="Section">
+											<label for="fieldurjrz" class="hidden">Company</label>
+											<input type="text" class="form-control input-lg" id="fieldurjrz" name="cm-f-urjrz" placeholder="Company">
 										</div>
 										<div class="col-md-3">
 											<button type="submit" class="btn btn-default btn-lg">Subscribe</button>
@@ -358,9 +372,10 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 		
-		<!--
+		
+		
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 		<script src="js/scripts.min.js"></script>
-		-->
+		
 	</body>
 </html>

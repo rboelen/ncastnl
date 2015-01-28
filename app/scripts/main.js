@@ -1,5 +1,22 @@
  $(document).ready(function() {
 
+ 	// User Agent Variables
+	var isPhone = false;
+	var isIpad = false;
+	
+	// Detect User Agent
+	if(navigator.userAgent.match(/Android/i) ||
+		navigator.userAgent.match(/webOS/i) ||
+		navigator.userAgent.match(/iPhone/i) ||
+		navigator.userAgent.match(/iPod/i)) {
+		$('body').addClass('phone');
+		isPhone = true;
+	}
+	if(navigator.userAgent.match(/iPad/i)){
+		$('body').addClass('ipad');
+		isIpad = true;
+	}	
+
  	$(".navbar a[href^='#']").on('click', function(e) {
 	   // prevent default anchor click behavior
 	   e.preventDefault();
@@ -47,12 +64,19 @@
 			if(ncastPlayer.paused()) {
 				ncastPlayer.play();
 				$("#playPause").addClass("playing");
+				if(isIpad){
+					$("#playPause").addClass("hidden");
+				}
+				
 				$(".videocontrols h1, #watch").addClass("hidden");
 				ncastPlayer.posterImage.hide();
 			}
 			else {
 				ncastPlayer.pause();
 				$("#playPause").removeClass("playing");
+				if(isIpad){
+					$("#playPause").removeClass("hidden");
+				}
 			}
 		});
 
