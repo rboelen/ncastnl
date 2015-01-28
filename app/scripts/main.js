@@ -31,6 +31,14 @@
 			$("#playPause").removeClass("playing");
 		});
 
+		//update HTML5 video current play time
+		this.on('timeupdate', function() {
+		   var currentPos = ncastPlayer.currentTime(); //Get currenttime
+		   var maxduration = ncastPlayer.duration(); //Get video duration
+		   var percentage = 100 * currentPos / maxduration; //in %
+		   $('.timebar').css('width', percentage+'%');
+		});
+
 		//click behaviour playbutton
 		$(".videocontrols").click(function(){
 
