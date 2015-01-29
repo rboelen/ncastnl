@@ -50,7 +50,8 @@ module.exports = function(grunt) {
 		targethtml: {
 			dist: {
 				files: {
-					'dist/index.html' : 'app/index.html'
+					'dist/index.html' : 'app/index.html',
+					'dist/product.html' : 'app/product.html'
 				}
 			}
 		}
