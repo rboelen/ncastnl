@@ -7390,7 +7390,8 @@ h2 {
 }
 #management,
 #publishing,
-#network-management {
+#network-management,
+.what {
   background-color: #fff;
 }
 .worldwide .what h2,
@@ -7429,6 +7430,9 @@ h2 {
   font-weight: 300;
   margin-top: 55px;
 }
+.content {
+  padding: 0 50px;
+}
 .content-right h3,
 .content-left h3 {
   color: #ea4325;
@@ -7450,20 +7454,36 @@ h2 {
   font-weight: 300;
   margin-bottom: 40px;
 }
-#n-cast img {
-  top: 46px;
+#n-cast {
   position: relative;
-  margin-left: 15px;
+}
+#n-cast img {
+  max-width: 100%;
+  bottom: -10px;
+  right: 0;
+  position: absolute;
+}
+.ncast-img-home {
+  height: 804px;
+}
+.ncast-img {
+  height: 750px;
 }
 .content-right img {
-  top: 57px;
-  left: -15px;
-  position: relative;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
 }
 .content-left img {
-  top: 53px;
-  left: 15px;
-  position: relative;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.img-left,
+.img-right {
+  height: 532px;
 }
 .why {
   overflow: hidden;
@@ -7472,13 +7492,24 @@ h2 {
 }
 .video_image {
   background: url("../img/img-from-video.jpg") no-repeat center center;
+  min-height: 500px;
   background-color: white;
-  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .calling_image {
   background: url("../img/bellend-meisje.jpg") no-repeat center center;
-  background-color: #253546;
-  height: 500px;
+  min-height: 500px;
+  background-color: white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.ncast-text {
+  padding: 0 30px;
 }
 #n-cast,
 #scheduling,
@@ -7501,8 +7532,7 @@ h2 {
   background: #ea4325 url("../img/map.jpg") no-repeat;
 }
 .map .row {
-  padding-top: 74px;
-  padding-bottom: 120px;
+  padding: 74px 160px 120px;
 }
 .map h1 {
   font-weight: 300;
@@ -7627,6 +7657,7 @@ footer {
 #workspaces,
 #reporting {
   overflow: hidden;
+  position: relative;
 }
 .pushdown {
   padding-top: 10px;
@@ -7643,6 +7674,9 @@ footer {
   width: 0;
   height: 5px;
   background: #ea4325;
+}
+.split-text {
+  padding: 0 30px;
 }
 @media only screen and (max-width: 480px) {
   .videocontrols {
@@ -7672,18 +7706,20 @@ footer {
     width: 100%;
     height: 555px;
   }
+  .split-text {
+    padding: 0 10px;
+  }
   .map .row {
-    padding-top: 50px;
-    padding-bottom: 62px;
+    padding: 50px 10px 62px;
   }
   #about h2 {
     margin-top: 30px;
   }
   .video_image {
-    height: 250px;
+    min-height: 250px;
   }
   .calling_image {
-    height: 250px;
+    min-height: 250px;
   }
   .card {
     margin-bottom: 40px;
@@ -7700,17 +7736,79 @@ footer {
   .arrow-up-inside:after {
     left: 46%;
   }
+  .content {
+    padding: 0 20px;
+  }
+  .content-right h3,
+  .content-left h3 {
+    font-size: 30px;
+  }
+  .content-left ul,
+  .content-right ul {
+    margin-bottom: 0px;
+  }
+  .img-left {
+    height: 340px;
+  }
+  .img-right {
+    height: 300px;
+  }
+  .ncast-img {
+    height: 300px;
+  }
+  .ncast-img-home {
+    height: 300px;
+  }
 }
-@media only screen and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .split-text {
+    padding: 0 20px;
+  }
+  .map .row {
+    padding: 50px 10px 62px;
+  }
+  #about h2 {
+    margin-top: 36px;
+    margin-bottom: 14px;
+  }
   .container {
     width: 100%;
     margin-right: 0;
     margin-left: 0;
   }
   #n-cast .btn {
-    margin-bottom: 40px;
+    margin-bottom: 11px;
   }
   #n-cast img {
-    top: 78px;
+    max-width: 100%;
+    bottom: -10px;
+    right: 0;
+    position: absolute;
+  }
+  .ncast-img {
+    height: 670px;
+  }
+  .ncast-img-home {
+    height: 704px;
+  }
+  .ncast-text {
+    padding: 0 20px;
+  }
+  .content-right h3,
+  .content-left h3 {
+    font-size: 30px;
+  }
+  .content-left ul,
+  .content-right ul {
+    margin-bottom: 63px;
+  }
+  .card-wrapper {
+    width: 90%;
+  }
+  .img-left {
+    height: 470px;
+  }
+  .img-right {
+    height: 500px;
   }
 }
