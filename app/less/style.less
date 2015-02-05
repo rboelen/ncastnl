@@ -388,6 +388,7 @@ h2{
 .card{
 	border: 1px solid #C1C1C1;
 	background: white;
+	min-height: 635px;
 }
 .card img{
 	border-bottom: 1px solid #C1C1C1;
@@ -411,6 +412,12 @@ h2{
 }
 #contact{
 	background: @brand-info;
+}
+#contact .lead a{
+	color: @text-color;
+}
+#contact .lead a:hover{
+	color: darken(@text-color, 15%);
 }
 #contact .container{
 	padding-top: 46px;

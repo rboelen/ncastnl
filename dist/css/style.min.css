@@ -7599,6 +7599,7 @@ h2 {
 .card {
   border: 1px solid #C1C1C1;
   background: white;
+  min-height: 635px;
 }
 .card img {
   border-bottom: 1px solid #C1C1C1;
@@ -7622,6 +7623,12 @@ h2 {
 }
 #contact {
   background: #253546;
+}
+#contact .lead a {
+  color: #ffffff;
+}
+#contact .lead a:hover {
+  color: #d9d9d9;
 }
 #contact .container {
   padding-top: 46px;
