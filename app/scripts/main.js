@@ -33,6 +33,10 @@
 	       // (default click behaviour)
 	       window.location.hash = hash;
 	   });
+	   
+	   // google analytics
+		ga('send', 'pageview', location.pathname + hash);
+				
 	});
 
 	$(".videowrapper").fitVids();
