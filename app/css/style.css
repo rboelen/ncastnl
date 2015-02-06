@@ -7599,7 +7599,15 @@ h2 {
 .card {
   border: 1px solid #C1C1C1;
   background: white;
-  min-height: 635px;
+  min-height: 585px;
+}
+.card h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.card p.lead {
+  font-size: 14px;
+  font-weight: 500;
 }
 .card img {
   border-bottom: 1px solid #C1C1C1;
