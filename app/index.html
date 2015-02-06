@@ -8,15 +8,26 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>n-cast</title>
 		<meta name="viewport" content="width=device-width">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favico.ico">
 		<!--(if target dev)><!-->
 		<link rel="stylesheet" href="css/style.css">
 		<script src="scripts/vendor/modernizr-2.8.3.min.js"></script>
 		<!--<!(endif)-->
-
 		<!--(if target dist)><!-->
 		<link rel="stylesheet" href="css/style.min.css">
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 		<!--<!(endif)-->
+		
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-59439926-1', {'allowAnchor': true});
+		  ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+
+		</script>
 	</head>
 	<body data-spy="scroll" data-offset="90" data-target="#navbar" class="home">
 		<nav class="navbar navbar-default navbar-fixed-top">
@@ -61,7 +72,7 @@
 					<div class="video">
 						<video id="vid" class="video-js vjs-default-skin" preload="auto" poster="img/video.jpg" width="auto" height="auto" data-setup='{"techOrder": ["html5", "flash"]}'>
 
-							<source src="http://player.vimeo.com/external/118603116.sd.mp4?s=696e23723cabcf26124b15101ed3b7eb" type='video/mp4' />
+							<source src="http://player.vimeo.com/external/118603116.hd.mp4?s=4d08c761585f92adbd658537978ab31f" type='video/mp4' />
 
 							<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
 							</p>
@@ -71,7 +82,7 @@
 								<param name="movie" value="video-js/video-js.swf"/>
 								<param name="allowfullscreen" value="false"/>
 
-								<param name="flashvars" value='config={"playlist":["img/video.jpg", {"url": "http://player.vimeo.com/external/118603116.sd.mp4?s=696e23723cabcf26124b15101ed3b7eb","autoPlay":false,"autoBuffering":true}]}'/>
+								<param name="flashvars" value='config={"playlist":["img/video.jpg", {"url": "http://player.vimeo.com/external/118603116.hd.mp4?s=4d08c761585f92adbd658537978ab31f","autoPlay":false,"autoBuffering":true}]}'/>
 								
 								<!-- Image Fallback. Typically the same as the poster image. -->
 								<img src="img/video.jpg" width="auto" height="auto" alt="Poster Image" title="No video playback capabilities." />
