@@ -7389,8 +7389,8 @@ h2 {
   margin-bottom: 14px;
 }
 #management,
-#publishing,
-#network-management,
+#workspaces,
+#reporting,
 .what {
   background-color: #fff;
 }
@@ -7491,7 +7491,7 @@ h2 {
   width: 100%;
 }
 .video_image {
-  background: url("../img/img-from-video.jpg") no-repeat center center;
+  background: url("../img/digital-signage-content.jpg") no-repeat center center;
   min-height: 500px;
   background-color: white;
   -webkit-background-size: cover;
@@ -7512,9 +7512,8 @@ h2 {
   padding: 0 30px;
 }
 #n-cast,
-#scheduling,
-#workspaces,
-#reporting {
+#publishing,
+#network-management {
   background: #F2F2F2;
 }
 #features,
