@@ -52,6 +52,10 @@
 // VideoJS 
 @import "../video-js/video-js.less";
 
+// Owl carousel
+@import "../owl.carousel/owl-carousel/owl.carousel.css";
+@import "../owl.carousel/owl-carousel/owl.theme.css";
+
 //Fonts
 @body-font-path: "../fonts/";
 
@@ -88,7 +92,8 @@
 
 // Bootstrap customization
 @font-family-sans-serif: 'uni-sans';
-@headings-line-height:    1.3;
+@headings-line-height: 1.3;
+@headings-font-weight: 700;
 @text-color: #fff;
 
 @brand-primary: #EA4325;
@@ -130,6 +135,7 @@ body {
 .videowrapper{
 	width:100%;
 	max-width: 1170px;
+	cursor:pointer;
 }
 .videowrapper h1 {
 	font-weight: 300;
@@ -167,6 +173,23 @@ body {
 #playPause.playing{
 	background-position: -91px 0px;
 }
+// Carousel
+.owl-theme .owl-controls .owl-page span{
+	background: #fff;
+}
+.owl-controls{
+	position:relative;
+	z-index:20;
+}
+.owl-theme .owl-controls{
+	margin-top:-27px;
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+}
+// Site
 .navbar-brand {
   background: url("../img/logo.svg") no-repeat center center;
   width: 154px;
@@ -174,7 +197,8 @@ body {
 }
 .lead{
 	font-size: 15px;
-	line-height: 1.8;
+	line-height: 1.6;
+	font-weight: 500;
 }
 h2{
 	font-weight: 300;
@@ -245,10 +269,17 @@ h2{
 	margin-bottom: 121px;
 }
 #techsheet ul{
-	line-height: 1.8;
+	line-height: 1.6;
 	font-size: 15px;
-	font-weight: 300;
+	font-weight: 500;
 	margin-bottom: 40px;
+	list-style-type: none;
+}
+#techsheet li:before {    
+	font-family: 'FontAwesome';
+	content: '\f00c';
+	margin:0 14px 0 -15px;
+	color: lighten(@brand-info, 15%)
 }
 #n-cast{
 	position:relative;
@@ -594,7 +625,7 @@ footer{
 		position: absolute;
 	}
 	.ncast-img{
-		height:670px;
+		height:787px;
 	}
 	.ncast-img-home{
 		height: 704px;
