@@ -59,7 +59,6 @@
 			<section id="header">
 
 				<div class="videowrapper">
-
 					<div class="container">
 						<div class="row">
 							<div class="videocontrols col-md-12 col-sm-12">
@@ -71,24 +70,21 @@
 						</div>
 					</div>
 					<div class="video">
-						<video id="vid" class="video-js vjs-default-skin" preload="auto" poster="img/digital-signage-promo-video.jpg" width="auto" height="auto" data-setup='{"techOrder": ["html5", "flash"]}'>
-
-							<source src="http://player.vimeo.com/external/118603116.hd.mp4?s=4d08c761585f92adbd658537978ab31f" type='video/mp4' />
-
-							<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-							</p>
-
-							<!-- Flash Fallback. Use any flash video player here. Make sure to keep the vjs-flash-fallback class. -->
-							<object id="flash_fallback_1" class="vjs-flash-fallback" width="auto" height="auto" type="application/x-shockwave-flash" data="video-js/video-js.swf">
-								<param name="movie" value="video-js/video-js.swf"/>
-								<param name="allowfullscreen" value="false"/>
-
-								<param name="flashvars" value='config={"playlist":["img/digital-signage-promo-video.jpg", {"url": "http://player.vimeo.com/external/118603116.hd.mp4?s=4d08c761585f92adbd658537978ab31f","autoPlay":false,"autoBuffering":true}]}'/>
+						<div class="video-js-box">
+							<video id="vid" class="video-js vjs-default-skin" width="auto" height="auto" preload="auto" poster="img/digital-signage-promo-video.jpg">
+								<source src="http://player.vimeo.com/external/118603116.hd.mp4?s=4d08c761585f92adbd658537978ab31f" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
 								
-								<!-- Image Fallback. Typically the same as the poster image. -->
-								<img src="img/digital-signage-promo-video.jpg" width="auto" height="auto" alt="Poster Image" title="No video playback capabilities." />
-							</object>
-						</video>
+								<!-- Flash Fallback.-->
+								<object id="flash_fallback_1" class="vjs-flash-fallback" width="auto" height="auto" type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
+									<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
+									<param name="allowfullscreen" value="false" />
+									<param name="flashvars" value='config={"playlist":["img/digital-signage-promo-video.jpg", {"url": "http://player.vimeo.com/external/118603116.hd.mp4?s=4d08c761585f92adbd658537978ab31f","autoPlay":false,"autoBuffering":true}]}' />
+									<!-- Image Fallback. Typically the same as the poster image. -->
+									<img src="img/digital-signage-promo-video.jpg" width="auto" height="auto" alt="Poster Image" 
+									title="No video playback capabilities." />
+								</object>
+							</video>
+						</div>
 					</div>
 					<div class="progressbar container-fluid">
 						<div class="row">
@@ -106,7 +102,7 @@
 							<div class="col-md-6 col-sm-6">
 								<div class="split-text">
 									<h2>We believe everybody deserves relevant content, at the right place &amp; time.
- <br>Without any effort. </h2>
+									<br>Without any effort. </h2>
 									<p class="lead">
 									How? By making our content beautiful and intelligent, our CMS powerful yet fun &amp; easy to use and run everything seamless from the cloud.
 									</p>
@@ -384,8 +380,8 @@
 		<!--<!(endif)-->
 
 		<!--(if target dist)><!-->
-		<!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-		<script src="js/scripts.min.js"></script> -->
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+		<script src="js/scripts.min.js"></script>
 		<!--<!(endif)-->
 	</body>
 </html>

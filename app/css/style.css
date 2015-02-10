@@ -7374,6 +7374,11 @@ body {
 #playPause.playing {
   background-position: -91px 0px;
 }
+/* Hide the poster when controls are disabled because it's clickable
+    and the native poster can take over */
+.video-js.vjs-controls-disabled .vjs-poster {
+  display: block;
+}
 .owl-theme .owl-controls .owl-page span {
   background: #fff;
 }
