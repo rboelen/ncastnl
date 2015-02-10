@@ -53,8 +53,9 @@
 @import "../video-js/video-js.less";
 
 // Owl carousel
-@import "../owl.carousel/owl-carousel/owl.carousel.css";
-@import "../owl.carousel/owl-carousel/owl.theme.css";
+@import "../owl.carousel/owl-carousel/owl.carousel.less"; // Css files extension renamed to .less
+@import "../owl.carousel/owl-carousel/owl.theme.less";
+
 
 //Fonts
 @body-font-path: "../fonts/";
@@ -173,8 +174,8 @@ body {
 #playPause.playing{
 	background-position: -91px 0px;
 }
-/* Hide the poster when controls are disabled because it's clickable
-    and the native poster can take over */
+/* Overruled: 'Hide the poster when controls are disabled because it's clickable
+    and the native poster can take over' */
 .video-js.vjs-controls-disabled .vjs-poster {
   display: block;
 }
