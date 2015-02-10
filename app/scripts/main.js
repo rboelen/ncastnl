@@ -67,34 +67,17 @@
 
 			if(ncastPlayer.paused()) {
 				ncastPlayer.play();
-				$("#playPause").addClass("playing");
-				if(isIpad){
-					$("#playPause").addClass("hidden");
-				}
-				
+				$("#playPause").addClass("hidden");
 				$(".videocontrols h1, #watch").addClass("hidden");
 				ncastPlayer.posterImage.hide();
 			}
 			else {
 				ncastPlayer.pause();
-				$("#playPause").removeClass("playing");
-				if(isIpad){
-					$("#playPause").removeClass("hidden");
-				}
+				$("#playPause").removeClass("hidden");
 			}
 		});
-
-		$(".videowrapper").hover(
-			function() {
-				$("#playPause").removeClass("hidden");
-			},
-			function() {
-				if (ncastPlayer.currentTime() > 0) {
-					$("#playPause").addClass("hidden");
-				} else {
-
-				};
-			}
-		);
 	});
+
+	// Owl slider
+	$("#owl-carousel").owlCarousel();
 });
