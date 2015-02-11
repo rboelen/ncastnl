@@ -64,8 +64,6 @@
 			//click behaviour playbutton
 			$(".videocontrols").click(function(){
 
-				console.log(ncastPlayer.ended());
-
 				if(ncastPlayer.paused()) {
 					ncastPlayer.play();
 					$("#playPause").addClass("hidden");

@@ -43,7 +43,7 @@
 @import "../bootstrap/less/modals.less";
 @import "../bootstrap/less/tooltip.less";
 @import "../bootstrap/less/popovers.less";
-// @import "../bootstrap/less/carousel.less";
+@import "../bootstrap/less/carousel.less";
 
 // Utility classes
 @import "../bootstrap/less/utilities.less";
@@ -177,7 +177,7 @@ body {
 #playPause.playing{
 	background-position: -91px 0px;
 }
-/* Overruled! To show poster image in flash fallback.
+/* Overruled to show poster image in flash fallback.
 'Hide the poster when controls are disabled because it's clickable
     and the native poster can take over' */
 .video-js.vjs-controls-disabled .vjs-poster {
@@ -375,29 +375,6 @@ h2{
 .map h1{
 	font-weight: 300;
 }
-
-.arrow-box {
-	position: relative;
-	background: white;
-}
-.after-box{
-	bottom: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-color: rgba(136, 183, 213, 0);
-	border-bottom-color: white;
-	border-width: 10px;
-	margin-left: -10px;
-}
-.arrow-box:after{
-	.after-box;
-	border-bottom-color: white;
-}
 #subscribe{
 	background: url("../img/subscribe-bg.jpg") no-repeat center center;
 	background-size: cover;
@@ -417,6 +394,10 @@ h2{
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
 	border-bottom: 10px solid #DCE0E1;
+}
+.map .arrow-up-inside:after{
+		border-bottom-color: #fff;
+		left: 75%;
 }
 .form-wrapper{
 	width: 80%;
@@ -581,11 +562,10 @@ footer{
 		margin-bottom: 20px;
 	}
 	.arrow-up-inside:after{
-		left:50%;
-	}
-
-	.arrow-up-inside:after{
 		left:46%;
+	}
+	.map .arrow-up-inside:after{
+		left: 46%;
 	}
 	.content{
 		padding: 0 20px;
