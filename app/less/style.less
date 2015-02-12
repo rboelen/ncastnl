@@ -19,24 +19,24 @@
 // Components
 @import "../bootstrap/less/component-animations.less";
 @import "../bootstrap/less/dropdowns.less";
-@import "../bootstrap/less/button-groups.less";
-@import "../bootstrap/less/input-groups.less";
+// @import "../bootstrap/less/button-groups.less";
+// @import "../bootstrap/less/input-groups.less";
 @import "../bootstrap/less/navs.less";
 @import "../bootstrap/less/navbar.less";
-@import "../bootstrap/less/breadcrumbs.less";
-@import "../bootstrap/less/pagination.less";
-@import "../bootstrap/less/pager.less";
-@import "../bootstrap/less/labels.less";
-@import "../bootstrap/less/badges.less";
-@import "../bootstrap/less/jumbotron.less";
-@import "../bootstrap/less/thumbnails.less";
-@import "../bootstrap/less/alerts.less";
-@import "../bootstrap/less/progress-bars.less";
+// @import "../bootstrap/less/breadcrumbs.less";
+// @import "../bootstrap/less/pagination.less";
+// @import "../bootstrap/less/pager.less";
+// @import "../bootstrap/less/labels.less";
+// @import "../bootstrap/less/badges.less";
+// @import "../bootstrap/less/jumbotron.less";
+// @import "../bootstrap/less/thumbnails.less";
+// @import "../bootstrap/less/alerts.less";
+// @import "../bootstrap/less/progress-bars.less";
 @import "../bootstrap/less/media.less";
-@import "../bootstrap/less/list-group.less";
-@import "../bootstrap/less/panels.less";
+// @import "../bootstrap/less/list-group.less";
+// @import "../bootstrap/less/panels.less";
 @import "../bootstrap/less/responsive-embed.less";
-@import "../bootstrap/less/wells.less";
+// @import "../bootstrap/less/wells.less";
 @import "../bootstrap/less/close.less";
 
 // Components w/ JavaScript
@@ -49,12 +49,16 @@
 @import "../bootstrap/less/utilities.less";
 @import "../bootstrap/less/responsive-utilities.less";
 
+// Fontawesome
+@import "../less/font-awesome/font-awesome.less";
+
 // VideoJS 
 @import "../video-js/video-js.less";
 
 // Owl carousel
-@import "../owl.carousel/owl-carousel/owl.carousel.css";
-@import "../owl.carousel/owl-carousel/owl.theme.css";
+@import "../owl.carousel/owl-carousel/owl.carousel.less"; // Css files extension renamed to .less
+@import "../owl.carousel/owl-carousel/owl.theme.less";
+
 
 //Fonts
 @body-font-path: "../fonts/";
@@ -173,6 +177,14 @@ body {
 #playPause.playing{
 	background-position: -91px 0px;
 }
+/* Overruled to show poster image in flash fallback.
+'Hide the poster when controls are disabled because it's clickable
+    and the native poster can take over' */
+.video-js.vjs-controls-disabled .vjs-poster {
+  display: block;
+}
+
+
 // Carousel
 .owl-theme .owl-controls .owl-page span{
 	background: #fff;
@@ -275,11 +287,11 @@ h2{
 	margin-bottom: 40px;
 	list-style-type: none;
 }
-#techsheet li:before {    
-	font-family: 'FontAwesome';
-	content: '\f00c';
-	margin:0 14px 0 -15px;
-	color: lighten(@brand-info, 15%)
+#techsheet .col-md-4{
+	padding: 0 50px;
+}
+#techsheet .col-sm-4{
+	padding: 0 25px;
 }
 #n-cast{
 	position:relative;
@@ -363,29 +375,6 @@ h2{
 .map h1{
 	font-weight: 300;
 }
-
-.arrow-box {
-	position: relative;
-	background: white;
-}
-.after-box{
-	bottom: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-color: rgba(136, 183, 213, 0);
-	border-bottom-color: white;
-	border-width: 10px;
-	margin-left: -10px;
-}
-.arrow-box:after{
-	.after-box;
-	border-bottom-color: white;
-}
 #subscribe{
 	background: url("../img/subscribe-bg.jpg") no-repeat center center;
 	background-size: cover;
@@ -405,6 +394,10 @@ h2{
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
 	border-bottom: 10px solid #DCE0E1;
+}
+.map .arrow-up-inside:after{
+		border-bottom-color: #fff;
+		left: 75%;
 }
 .form-wrapper{
 	width: 80%;
@@ -569,11 +562,10 @@ footer{
 		margin-bottom: 20px;
 	}
 	.arrow-up-inside:after{
-		left:50%;
-	}
-
-	.arrow-up-inside:after{
 		left:46%;
+	}
+	.map .arrow-up-inside:after{
+		left: 46%;
 	}
 	.content{
 		padding: 0 20px;
@@ -625,7 +617,7 @@ footer{
 		position: absolute;
 	}
 	.ncast-img{
-		height:787px;
+		height:830px;
 	}
 	.ncast-img-home{
 		height: 704px;
@@ -648,6 +640,9 @@ footer{
 		height:470px;
 	}
 	.img-right{
-		height:500px;
+		height:597px;
 	}
+	.card{
+		min-height: 645px;
+}
 }
