@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="css/style.css">
 		<script src="scripts/vendor/modernizr-2.8.3.min.js"></script>
 		<!--<!(endif)-->
+
 		<!--(if target dist)><!-->
 		<link rel="stylesheet" href="css/style.min.css">
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -58,7 +59,6 @@
 			<section id="header">
 
 				<div class="videowrapper">
-
 					<div class="container">
 						<div class="row">
 							<div class="videocontrols col-md-12 col-sm-12">
@@ -70,24 +70,21 @@
 						</div>
 					</div>
 					<div class="video">
-						<video id="vid" class="video-js vjs-default-skin" preload="auto" poster="img/digital-signage-promo-video.jpg" width="auto" height="auto" data-setup='{"techOrder": ["html5", "flash"]}'>
-
-							<source src="http://player.vimeo.com/external/118603116.hd.mp4?s=4d08c761585f92adbd658537978ab31f" type='video/mp4' />
-
-							<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-							</p>
-
-							<!-- Flash Fallback. Use any flash video player here. Make sure to keep the vjs-flash-fallback class. -->
-							<object id="flash_fallback_1" class="vjs-flash-fallback" width="auto" height="auto" type="application/x-shockwave-flash" data="video-js/video-js.swf">
-								<param name="movie" value="video-js/video-js.swf"/>
-								<param name="allowfullscreen" value="false"/>
-
-								<param name="flashvars" value='config={"playlist":["img/digital-signage-promo-video.jpg", {"url": "http://player.vimeo.com/external/118603116.hd.mp4?s=4d08c761585f92adbd658537978ab31f","autoPlay":false,"autoBuffering":true}]}'/>
+						<div class="video-js-box">
+							<video id="vid" class="video-js vjs-default-skin" width="auto" height="auto" preload="auto" poster="img/digital-signage-promo-video.jpg">
+								<source src="http://player.vimeo.com/external/118603116.hd.mp4?s=4d08c761585f92adbd658537978ab31f" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
 								
-								<!-- Image Fallback. Typically the same as the poster image. -->
-								<img src="img/digital-signage-promo-video.jpg" width="auto" height="auto" alt="Poster Image" title="No video playback capabilities." />
-							</object>
-						</video>
+								<!-- Flash Fallback.-->
+								<object id="flash_fallback_1" class="vjs-flash-fallback" width="auto" height="auto" type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
+									<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
+									<param name="allowfullscreen" value="false" />
+									<param name="flashvars" value='config={"playlist":["img/digital-signage-promo-video.jpg", {"url": "http://player.vimeo.com/external/118603116.hd.mp4?s=4d08c761585f92adbd658537978ab31f","autoPlay":false,"autoBuffering":true}]}' />
+									<!-- Image Fallback. Typically the same as the poster image. -->
+									<img src="img/digital-signage-promo-video.jpg" width="auto" height="auto" alt="Poster Image" 
+									title="No video playback capabilities." />
+								</object>
+							</video>
+						</div>
 					</div>
 					<div class="progressbar container-fluid">
 						<div class="row">
@@ -105,7 +102,7 @@
 							<div class="col-md-6 col-sm-6">
 								<div class="split-text">
 									<h2>We believe everybody deserves relevant content, at the right place &amp; time.
- <br>Without any effort. </h2>
+									<br>Without any effort. </h2>
 									<p class="lead">
 									How? By making our content beautiful and intelligent, our CMS powerful yet fun &amp; easy to use and run everything seamless from the cloud.
 									</p>
@@ -121,7 +118,7 @@
 				</div>
 				<div class="worldwide">
 					<div class="map">
-						<div class="container">
+						<div class="container arrow-up-inside">
 							<div class="row">
 								<h1 class="text-center">
 									To date we have created thousands of channels to practically every corner of the world. Simple, safe, good looking &amp; for every type of industry.
@@ -132,7 +129,7 @@
 					<div class="what">
 						<div class="container-fluid">
 							<div class="row">
-								<div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6 arrow-box">
+								<div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6">
 									<div class="split-text">
 										<h2>We support companies to create unique TV-channels at ‘out of home’ locations.
 										We love what we do and we think it shows.</h2>
@@ -246,83 +243,59 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="cases">
-							<div id="cases-carousel" class="carousel slide" data-ride="carousel">
-								<!-- Indicators -->
-									<ol class="carousel-indicators">
-										<li data-target="#cases-carousel" data-slide-to="0" class="active"></li>
-										<li data-target="#cases-carousel" data-slide-to="1"></li>
-										<li data-target="#cases-carousel" data-slide-to="2"></li>
-										<li data-target="#cases-carousel" data-slide-to="3"></li>
-										<li data-target="#cases-carousel" data-slide-to="4"></li>
-										<li data-target="#cases-carousel" data-slide-to="5"></li>
-										<li data-target="#cases-carousel" data-slide-to="6"></li>
-										<li data-target="#cases-carousel" data-slide-to="7"></li>
-									</ol>
-								<!-- Wrapper for slides -->
-								<div class="carousel-inner" role="listbox">
-									<div class="carousel-header">
-										<h3>Cases</h3>
-									</div>
-									<div class="item active">
-									<img src="img/BioscoopgangPathe.jpg" alt="...">
-										<div class="carousel-caption">
-											<p>Cinemas</p>
-										</div>
-									</div>
-									<div class="item">
-										<img src="img/Coca_Cola_Menuboard_UniversityV2.jpg" alt="...">
-										<div class="carousel-caption">
-											<p>Digital Menu boards</p>
-										</div>
-									</div>
-									<div class="item">
-										<img src="img/CocaColaPathe.jpg" alt="...">
-										<div class="carousel-caption">
-                                            <p>Digital Menu boards</p>
-										</div>
-									</div>
-									<div class="item">
-										<img src="img/Friesland_campina.jpg" alt="...">
-										<div class="carousel-caption">
-											<p>Corporate</p>
-										</div>
-									</div>
-									<div class="item">
-										<img src="img/Hadley1.jpg" alt="...">
-										<div class="carousel-caption">
-											<p>Transportation</p>
-										</div>
-									</div>
-									<div class="item">
-										<img src="img/PatheHal.jpg" alt="...">
-										<div class="carousel-caption">
-											<p>Cinemas</p>
-										</div>
-									</div>
-									<div class="item">
-										<img src="img/Spuimarkt1.jpg" alt="...">
-										<div class="carousel-caption">
-											<p>Advertising</p>
-										</div>
-									</div>
-									<div class="item">
-										<img src="img/ZiggodomeHeineken2.jpg" alt="...">
-										<div class="carousel-caption">
-											<p>Venues</p>
-										</div>
-									</div>
+						<div class="carousel-header">
+							<h3>Cases</h3>
+						</div>
+						<div id="owl-carousel" class="owl-carousel">
+							<div class="slide">
+							<img class="img-responsive" src="img/BioscoopgangPathe.jpg" alt="...">
+								<div class="carousel-caption">
+									<p>Cinemas</p>
 								</div>
-								<!-- Controls -->
-								<a class="left carousel-control" href="#cases-carousel" role="button" data-slide="prev">
-									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-									<span class="sr-only">Previous</span>
-								</a>
-								<a class="right carousel-control" href="#cases-carousel" role="button" data-slide="next">
-									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-									<span class="sr-only">Next</span>
-								</a>
 							</div>
+							<div class="slide">
+								<img class="img-responsive" src="img/Coca_Cola_Menuboard_UniversityV2.jpg" alt="...">
+								<div class="carousel-caption">
+									<p>Digital Menu boards</p>
+								</div>
+							</div>
+							<div class="slide">
+								<img class="img-responsive" src="img/CocaColaPathe.jpg" alt="...">
+								<div class="carousel-caption">
+                                    <p>Digital Menu boards</p>
+								</div>
+							</div>
+							<div class="slide">
+								<img class="img-responsive" src="img/Friesland_campina.jpg" alt="...">
+								<div class="carousel-caption">
+									<p>Corporate</p>
+								</div>
+							</div>
+							<div class="slide">
+								<img class="img-responsive" src="img/Hadley1.jpg" alt="...">
+								<div class="carousel-caption">
+									<p>Transportation</p>
+								</div>
+							</div>
+							<div class="slide">
+								<img class="img-responsive" src="img/PatheHal.jpg" alt="...">
+								<div class="carousel-caption">
+									<p>Cinemas</p>
+								</div>
+							</div>
+							<div class="slide">
+								<img class="img-responsive" src="img/Spuimarkt1.jpg" alt="...">
+								<div class="carousel-caption">
+									<p>Advertising</p>
+								</div>
+							</div>
+							<div class="slide">
+								<img class="img-responsive" src="img/ZiggodomeHeineken2.jpg" alt="...">
+								<div class="carousel-caption">
+									<p>Venues</p>
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>

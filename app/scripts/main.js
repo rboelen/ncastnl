@@ -39,62 +39,45 @@
 				
 	});
 
-	$(".videowrapper").fitVids();
+	if($('body').hasClass('home')){
+		$(".videowrapper").fitVids();
 
-	var ncastPlayer = videojs("vid");
+		var ncastPlayer = videojs("vid");
 
-	ncastPlayer.ready(function(){
+		ncastPlayer.ready(function(){
 
-		this.on("ended", function(){
-			this.currentTime(0);
-			this.posterImage.show();
-			$("#playPause, .videocontrols h1, #watch").removeClass("hidden");
-			$("#playPause").removeClass("playing");
-		});
-
-		//update HTML5 video current play time
-		this.on('timeupdate', function() {
-		   var currentPos = ncastPlayer.currentTime(); //Get currenttime
-		   var maxduration = ncastPlayer.duration(); //Get video duration
-		   var percentage = 100 * currentPos / maxduration; //in %
-		   $('.timebar').css('width', percentage+'%');
-		});
-
-		//click behaviour playbutton
-		$(".videocontrols").click(function(){
-
-			console.log(ncastPlayer.ended());
-
-			if(ncastPlayer.paused()) {
-				ncastPlayer.play();
-				$("#playPause").addClass("playing");
-				if(isIpad){
-					$("#playPause").addClass("hidden");
-				}
-				
-				$(".videocontrols h1, #watch").addClass("hidden");
-				ncastPlayer.posterImage.hide();
-			}
-			else {
-				ncastPlayer.pause();
+			this.on("ended", function(){
+				this.currentTime(0);
+				this.posterImage.show();
+				$("#playPause, .videocontrols h1, #watch").removeClass("hidden");
 				$("#playPause").removeClass("playing");
-				if(isIpad){
+			});
+
+			//update HTML5 video current play time
+			this.on('timeupdate', function() {
+			   var currentPos = ncastPlayer.currentTime(); //Get currenttime
+			   var maxduration = ncastPlayer.duration(); //Get video duration
+			   var percentage = 100 * currentPos / maxduration; //in %
+			   $('.timebar').css('width', percentage+'%');
+			});
+
+			//click behaviour playbutton
+			$(".videocontrols").click(function(){
+
+				if(ncastPlayer.paused()) {
+					ncastPlayer.play();
+					$("#playPause").addClass("hidden");
+					$(".videocontrols h1, #watch").addClass("hidden");
+					ncastPlayer.posterImage.hide();
+				}
+				else {
+					ncastPlayer.pause();
 					$("#playPause").removeClass("hidden");
 				}
-			}
+			});
 		});
 
-		$(".videowrapper").hover(
-			function() {
-				$("#playPause").removeClass("hidden");
-			},
-			function() {
-				if (ncastPlayer.currentTime() > 0) {
-					$("#playPause").addClass("hidden");
-				} else {
-
-				};
-			}
-		);
-	});
+		// Owl slider
+		$("#owl-carousel").owlCarousel();
+	};
 });
